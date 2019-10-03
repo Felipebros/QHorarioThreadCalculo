@@ -12,7 +12,8 @@ void Thread_calculo::run()
 {
     for (int i = 0; i < 3; ++i) {
         qDebug() << QTime::currentTime().toString() << "etapa" << i;
-        sleep(1);
+//        sleep(1);
+        msleep(100);
         emit concluido(QString::number(i) + " " + HORARIO + " - " +
                        QTime::currentTime().toString());
     }
